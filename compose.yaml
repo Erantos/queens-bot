@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    container_name: queens-bot
+    restart: unless-stopped
+    environment:
+      - DISCORD_TOKEN=${DISCORD_TOKEN:?DISCORD_TOKEN is required}
+      - CLIENT_ID=${CLIENT_ID:?CLIENT_ID is required}

@@ -18,8 +18,9 @@
     "clean": "rimraf dist",
     "build": "npm run clean && tsc",
     "build:debug": "npm run clean && tsc --sourceMap",
-    "dev": "node --env-file=.env src/index.ts",
-    "start": "node --env-file=.env dist/index.js"
+    "start": "node --env-file=.env dist/index.js",
+    "dev": "npm run build && npm run start",
+    "deploy-cmd": "npm run build && node --env-file=.env dist/deploy.js"
   },
   "devDependencies": {
     "@types/node": "^24.12.0",

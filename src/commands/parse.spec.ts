@@ -1,24 +1,24 @@
-import { describe, expect, test } from 'vitest'
+import { expect, test } from 'vitest'
 import { parseBurger } from './parse.js'
 
-
-const validBurger = [
-    { abbr: "C", desc: "Chef" },
-    { abbr: "D", desc: "Dirty" },
-    { abbr: "BP", desc: "Black Pepper" },
-    { abbr: "E", desc: "Estaté" },
-    { abbr: "V", desc: "Verano" },
-    { abbr: "BS", desc: "Burger Semaine" },
+const validMeals = [
+    { abbr: "DSF", desc: "Dirty Saignant Frites" },
+    { abbr: "BSAPS", desc: "Burger Semaine A point Salade" },
+    { abbr: "VVF", desc: "Verano Végé Frites" },
+    { abbr: "DAPSBMSF", desc: "Dirty A point Sans Bacon Mix Salade Frites" },
 ]
 
-describe("Parse burger names", () => {
-    test.for(validBurger)("$abbr means $desc", ({ abbr, desc }) => {
-        expect(parseBurger(abbr)).toBe(desc);
-    })
+const invalidMeals = [
+    "OPF",
+    "BSOI",
+    "PTC",
+    "OSMSF"
+];
 
-    test('Fail on unknown burger', () => {
-        expect(parseBurger("DF")).toBe("Burger inconnu");
-        expect(parseBurger("HG")).toBe("Burger inconnu");
-        expect(parseBurger("A")).toBe("Burger inconnu");
-    })
+test.for(validMeals)("'$abbr' is '$desc'", ({ abbr, desc }) => {
+    expect(parseBurger(abbr)).toBe(desc)
+})
+
+test.for(invalidMeals)("'%s' is null", (abbr) => {
+    expect(parseBurger(abbr)).toBeNull()
 })

@@ -1,3 +1,5 @@
+import { SlashCommandBuilder } from "discord.js";
+
 const burgerMap = {
     "C": "Chef",
     "D": "Dirty",
@@ -19,7 +21,7 @@ export function extractBurger(abbr: string) {
 
 const baseMap = {
     "S": "Saignant",
-    "AP": "A point",
+    "AP": "A Point",
     "V": "Végé",
     "PC": "Poulet Crunchy"
 }
@@ -67,4 +69,18 @@ export function parseBurger(abbr: string) {
         (option1 ? ' ' + optionMap[option1.token] : '') +
         (option2 ? ' ' + optionMap[option2.token] : '');
 
+}
+
+export const parseBurgerCmd = {
+    data: new SlashCommandBuilder()
+        .setName('parse-burger')
+        .setDescription("Renvoie le nom complet d'un burger à partir de son abbréviation")
+        .addStringOption((option) => option.setName('burger').setDescription("L'abbréviation à vérifier").setRequired(true)),
+
+    async execute(interaction: any) {
+        const abbr = interaction.options.getString('burger') as string;
+        const res = parseBurger(abbr);
+
+        await interaction.reply(res ? `${abbr} -> ${res}` : `Aucun burger ne correspond à "${abbr}"`);
+    }
 }

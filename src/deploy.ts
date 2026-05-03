@@ -1,10 +1,11 @@
 import { REST, Routes } from 'discord.js';
 import { menuCmd } from './commands/menu.js';
+import { parseBurgerCmd } from './commands/parse.js';
 
 const token = process.env.DISCORD_TOKEN ?? "";
 const clientId = process.env.CLIENT_ID ?? "";
 
-const commands = [menuCmd];
+const commands = [menuCmd, parseBurgerCmd];
 const rest = new REST().setToken(token);
 
 (async () => {

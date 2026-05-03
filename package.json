@@ -19,7 +19,7 @@
     "build": "npm run clean && tsc",
     "build:debug": "npm run clean && tsc --sourceMap",
     "start": "node --env-file=.env dist/index.js",
-    "dev": "npm run build && npm run start",
+    "dev": "npm run build:debug && npm run start",
     "test": "vitest",
     "deploy-cmd": "npm run build && node --env-file=.env dist/deploy.js"
   },

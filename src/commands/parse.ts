@@ -55,20 +55,29 @@ export function extractOption(abbr: string) {
 }
 
 export function parseBurger(abbr: string) {
+    abbr = abbr.toUpperCase();
     const burger = extractBurger(abbr);
     if (!burger) return null;
 
     const base = extractBase(burger.remaining);
     if (!base) return null;
 
+    let finalOrder = burgerMap[burger.token] + ' ' + baseMap[base.token]
+    if (!base.remaining)
+        return finalOrder;
+
     const option1 = extractOption(base.remaining);
-    const option2 = option1 ? extractOption(option1.remaining) : null;
+    if (!option1) return null;
 
-    return burgerMap[burger.token] +
-        ' ' + baseMap[base.token] +
-        (option1 ? ' ' + optionMap[option1.token] : '') +
-        (option2 ? ' ' + optionMap[option2.token] : '');
+    finalOrder += ' ' + optionMap[option1.token];
+    if (!option1.remaining)
+        return finalOrder;
 
+    const option2 = extractOption(option1.remaining);
+    if (!option2 || option2.remaining) return null;
+
+    finalOrder += ' ' + optionMap[option2.token];
+    return finalOrder;
 }
 
 export const parseBurgerCmd = {

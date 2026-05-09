@@ -13,7 +13,6 @@ const validMeals = [
     { abbr: "DPCFSB", desc: "Dirty Poulet Crunchy Frites Sans Bacon" },
     { abbr: "VSMSF", desc: "Verano Saignant Mix Salade Frites" },
     { abbr: "BPSF", desc: "Black Pepper Saignant Frites" },
-
 ]
 
 const invalidMeals = [

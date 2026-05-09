@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest'
-import { parseBurger } from './parse.js'
+import { parseBurger } from './parse-burger.js'
 import { describe } from 'node:test';
 
 const validMeals = [

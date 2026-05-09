@@ -1,6 +1,6 @@
 import { Client, Collection, Events, GatewayIntentBits, MessageFlags } from "discord.js";
 import { menuCmd } from "./commands/menu.js";
-import { parseBurgerCmd } from "./commands/parse.js";
+import { parseOrderCmd } from "./commands/parse.js";
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] }) as Client & { commands: Collection<unknown, unknown> }
 const token = process.env.DISCORD_TOKEN;
@@ -11,7 +11,7 @@ client.once(Events.ClientReady, (readyClient: any) => {
 
 const commandsCollection = new Collection<any, any>();
 commandsCollection.set(menuCmd.data.name, menuCmd);
-commandsCollection.set(parseBurgerCmd.data.name, parseBurgerCmd);
+commandsCollection.set(parseOrderCmd.data.name, parseOrderCmd);
 
 client.on(Events.InteractionCreate, async (interaction) => {
     if (!interaction.isChatInputCommand()) return;

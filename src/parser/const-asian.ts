@@ -14,8 +14,6 @@ export const dishMap = {
     "LDT": { name: "Larme du Tigre" },
     "PT": { name: "Pad Thaï", availProt: ['C', 'P', 'PC'] },
     "CR": { name: "Curry Rouge", availProt: ['P', 'C'] },
-    "BE": { name: "Boeuf aux épices" },
-    "BAE": { name: "Boeuf aux épices" },
     "BB": { name: "Bô Bun", availProt: ['B', 'C', 'PC'] },
     "PDM": { name: "Plat Du Moment" }
 } satisfies Record<string, AsianDish>

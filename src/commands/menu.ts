@@ -26,6 +26,7 @@ export const menuCmd = {
                 { name: '🐯 Larme du tigre', value: 'Tataki de boeuf, sauce citron vert-piment, riz torréfié, riz et légumes, herbes aromatiques' },
                 { name: '🍜 Pad thaï', value: 'Vermicelles de riz sautées "oeufs et petites crevettes", sauce au tamarin, légumes, herbes aromatiques, cacahuètes (poulet / crevettes / poulet crunchy)' },
                 { name: '🍛 Curry rouge', value: 'Pâte de curry maison, crème de coco, riz et légumes, herbes aromatiques (poulet / crevettes)' },
+                { name: '🐷 Porc au Caramel', value: 'Porc mijoté, sauce au caramel, bambou émincé, riz et légumes, herbes aromatiques' },
                 { name: '🍱 Bô Bun', value: 'Salade de vermicelles de riz, nems au porc, crudités, herbes aromatiques, cacahuètes (boeuf citronnelle / crevettes / poulet crunchy)' },
                 { name: '🇵‎🇩‎🇲 Plat du moment', value: 'Une recette chaque semaine selon l\'humeur du chef !' },
             )

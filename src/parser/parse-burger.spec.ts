@@ -29,7 +29,9 @@ const invalidMeals = [
     "DSFSB STP",
     "\n; drop * from users",
     "crp",
-    "TRIPLE MONSTRE"
+    "TRIPLE MONSTRE",
+    "PC",
+    "PAC"
 ];
 
 test.for(validMeals)("'$abbr' is '$desc'", ({ abbr, desc }) => {

@@ -8,6 +8,8 @@ const validMeals = [
     { abbr: "LDT", desc: "Larme du Tigre" },
     { abbr: "PTPC", desc: "Pad Thaï Poulet Crunchy" },
     { abbr: "BBB", desc: "Bô Bun Boeuf" },
+    { abbr: "PC", desc: "Porc au Caramel" },
+    { abbr: "PAC", desc: "Porc au Caramel" },
     { abbr: "PDM", desc: "Plat Du Moment" },
 ]
 

@@ -18,6 +18,7 @@ export const optionMap = {
     "S": "Salade",
     "F": "Frites",
     "MSF": "Mix Salade Frites",
+    "MFS": "Mix Frites Salade",
     "SB": "Sans Bacon",
     "SJ": "Sans Jambon"
 }

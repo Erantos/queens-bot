@@ -13,10 +13,10 @@ export const dishMap = {
     "LT": { name: "Larme du Tigre" },
     "LDT": { name: "Larme du Tigre" },
     "PT": { name: "Pad Thaï", availProt: ['C', 'P', 'PC'] },
-    "CR": { name: "Curry Rouge", availProt: ['P', 'C'] },
-    "PC": { name: "Porc au Caramel" },
-    "PAC": { name: "Porc au Caramel" },
-    "BB": { name: "Bô Bun", availProt: ['B', 'C', 'PC'] },
+    "NS": { name: "Nouilles Au Saté", availProt: ['B', 'C'] },
+    "NAS": { name: "Nouilles Au Saté", availProt: ['B', 'C'] },
+    "CV": { name: "Curry Vert", availProt: ['P', 'C'] },
+    "FT": { name: "Fondue Thaï", availProt: ['B', 'C'] },
     "PDM": { name: "Plat Du Moment" }
 } satisfies Record<string, AsianDish>
 

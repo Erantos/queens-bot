@@ -1,15 +1,15 @@
-import { expect, test } from 'vitest'
+import { expect, test, describe } from 'vitest'
 import { parseAsian } from './parse-asian.js'
-import { describe } from 'node:test';
 
 const validMeals = [
     { abbr: "GP", desc: "Garlic Pepper" },
     { abbr: "LT", desc: "Larme du Tigre" },
     { abbr: "LDT", desc: "Larme du Tigre" },
     { abbr: "PTPC", desc: "Pad Thaï Poulet Crunchy" },
-    { abbr: "BBB", desc: "Bô Bun Boeuf" },
-    { abbr: "PC", desc: "Porc au Caramel" },
-    { abbr: "PAC", desc: "Porc au Caramel" },
+    { abbr: "NSB", desc: "Nouilles Au Saté Boeuf" },
+    { abbr: "NASC", desc: "Nouilles Au Saté Crevettes" },
+    { abbr: "CVC", desc: "Curry Vert Crevettes" },
+    { abbr: "FTB", desc: "Fondue Thaï Boeuf" },
     { abbr: "PDM", desc: "Plat Du Moment" },
 ]
 

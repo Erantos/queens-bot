@@ -1,17 +1,16 @@
-import { expect, test } from 'vitest'
+import { expect, test, describe } from 'vitest'
 import { parseBurger } from './parse-burger.js'
-import { describe } from 'node:test';
 
 const validMeals = [
     { abbr: "DSF", desc: "Dirty Saignant Frites" },
     { abbr: "BSAPS", desc: "Burger Semaine A Point Salade" },
-    { abbr: "VVF", desc: "Verano Végé Frites" },
+    { abbr: "BQSS", desc: "Bosqué Saignant Salade" },
     { abbr: "DAPSBMSF", desc: "Dirty A Point Sans Bacon Mix Salade Frites" },
-    { abbr: "VSS", desc: "Verano Saignant Salade" },
+    { abbr: "SAP", desc: "Saboya A Point" },
     { abbr: "BSSF", desc: "Burger Semaine Saignant Frites" },
     { abbr: "BSVF", desc: "Burger Semaine Végé Frites" },
     { abbr: "DPCFSB", desc: "Dirty Poulet Crunchy Frites Sans Bacon" },
-    { abbr: "VSMSF", desc: "Verano Saignant Mix Salade Frites" },
+    { abbr: "BQPCMSF", desc: "Bosqué Poulet Crunchy Mix Salade Frites" },
     { abbr: "BPSF", desc: "Black Pepper Saignant Frites" },
     { abbr: "BSAPMSF", desc: "Burger Semaine A Point Mix Salade Frites" },
     { abbr: "BSAPMFS", desc: "Burger Semaine A Point Mix Frites Salade" },

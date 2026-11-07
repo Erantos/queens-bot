@@ -2,8 +2,8 @@ export const burgerMap = {
     "C": "Chef",
     "D": "Dirty",
     "BP": "Black Pepper",
-    "E": "Estaté",
-    "V": "Verano",
+    "BQ": "Bosqué",
+    "S": "Saboya",
     "BS": "Burger Semaine"
 }
 
